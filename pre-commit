@@ -1,0 +1,15 @@
+changed_java_files=$(git diff --cached --name-only --diff-filter=ACMR | grep ".*java$" || true)
+if [[ -n "$changed_java_files" ]]
+then
+    echo "Reformatting Java files: $changed_java_files"
+    ~/.cache/HyundaiHtGitHook/java_code_formatter.sh $changed_java_files
+    if [ $? -gt 0 ]
+    then
+        echo "An error occurred, aborting commit!" >&2
+        exit 1
+    else
+        git add $changed_java_files
+    fi
+else
+    echo "No Java files changes found."
+fi

@@ -6,7 +6,9 @@ HyundaiHT Git hook file
 ## 동작 방식
 https://git-scm.com/book/ko/v2/Git%EB%A7%9E%EC%B6%A4-Git-Hooks
 Git hook을 이용하여 커밋 전, 커밋 후에 스크립트나 프로그램을 돌릴 수 있음
+
 해당 기능을 이용하여 코드 포멧팅, 테스트등을 할 수 있음
+
 Jvm을 돌려야 할 때에는 레포지터리에 내장되어 있는 Eclipse Temurin Openjdk를 사용함(안정성을 위한 조치)
 
 ## TBD들
@@ -27,13 +29,9 @@ Java 코드를 올릴 때 자동으로 현대에이치티의 Java 코드 컨벤�
 ## 현대에이치티에서 사용하는 git hook file 설치 방법
 ## 1. 리눅스
 ### 1.1 설치파일 실행 
-    '''
     ./install.sh
-    '''
 ### 1.2 다른 git의 레포지터리에서 install_githook 실행
-    '''
     install_githook
-    '''
 ## 2. 윈도우
     TBD
 

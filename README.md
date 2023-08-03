@@ -31,7 +31,12 @@ Java 코드를 올릴 때 자동으로 현대에이치티의 Java 코드 컨벤�
 ### 1.1 설치파일 실행 
     ./install.sh
 ### 1.2 다른 git의 레포지터리에서 install_githook 실행
+    cd [another git repositary]
     install_githook
+### 1.3 코드 커밋 후 사용!
+    git add Example.java
+    git commit
+    [commit 전 자동으로 코드 컨벤션 적용 및 기타 작업 실행]
 ## 2. 윈도우
     TBD
 

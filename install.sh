@@ -1,7 +1,7 @@
 #!/bin/bash
 BASEDIR=$(dirname "$0")
 TARGETDIR=~/.cache/HyundaiHtGitHook
-if [ $1 != '--patch' ]; then
+if [ "$1" != '--patch' ]; then
     if [ -d "$TARGETDIR" ]; then
         rm -rf $TARGETDIR
     fi
@@ -28,6 +28,7 @@ cp $BASEDIR/pre-commit $TARGETDIR/pre-commit
 
 if [ -z "${HYUNDAI_HT_HOOK_DIR}" ]; then
     cat $BASEDIR/bashrc_additional.sh >> ~/.bashrc
+    echo 'Install Finish'
     exec bash
 fi
 

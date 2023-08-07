@@ -1,5 +1,5 @@
 changed_java_files=$(git diff --cached --name-only --diff-filter=ACMR | grep ".*java$" || true)
-if [[ -n "$changed_java_files" ]]
+if [ -n "$changed_java_files" ]
 then
     echo "Reformatting Java files: $changed_java_files"
     ~/.cache/HyundaiHtGitHook/java_code_formatter.sh $changed_java_files
